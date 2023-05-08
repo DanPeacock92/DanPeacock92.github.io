@@ -8,6 +8,31 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
+
+.accordion {
+  background-color: #b9117e;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #008CBA; 
+  color: white
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: none;
+  overflow: hidden;
+}
   
 .button {
   border: none;
@@ -60,7 +85,9 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
   </div>
   <div class="w3-bar-block">
       <a href="#about-me" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-white"><i class="fa fa-user fa-fw w3-margin-right"></i>ABOUT ME</a>
-      <a href="#published-stories" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-white"><i class="fa fa-th-large fa-fw w3-margin-right"></i>PUBLISHED STORIES</a>
+      
+       <a href="#featured-story" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-white"><i class="fa fa-th-large fa-fw w3-margin-right"></i>FEATURED STORY</a>
+      <a href="#published-stories" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-white"><i class="fa fa-th-large fa-fw w3-margin-right"></i>ALL PUBLISHED STORIES</a>
         <a href="#forthcoming-stories" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-white"><i class="fa fa-th-large fa-fw w3-margin-right"></i>FORTHCOMING STORIES</a>
     <a href="https://twitter.com/DanPeacock92" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-twitter w3-margin-right"></i>TWITTER</a>
            
@@ -94,17 +121,32 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
       <p> He is also a First Reader at <a href="https://www.thedreadmachine.com"><em>The Dread Machine</em></a> and <em><a href="https://www.orions-belt.net/">Orion's Belt.</a></em></p>
     <p><a href="https://twitter.com/DanPeacock92?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @DanPeacock92</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     
-
-        
-<hr style="border: 2px solid #b9117e;">
-
-    &nbsp;
     
+    <hr style="border: 2px solid #b9117e;">
+<header id="featured-story">
+        <h4><strong>Featured story</strong></h4>
+        <table cellspacing="10">
+    <tr>
+      <td>
+        <img src="citation2.jpeg" width="150" height="225">
+      </td>
+     
+      
+      <td>
+        <p> <p><strong>They Came From Outer Space [Citation Needed]</strong> <p> <p>Published in <em>The Dread Machine</em>, March 2023<p> 
+        <a href="https://www.thedreadmachine.com/product/issue-3-1-paperback/"><button class="button button1">Buy</button></a>  <a href="https://www.thedreadmachine.com/they-came-from-outer-space-citation-needed/"><button class="button button2">Read online</button></a>
+      </td>
+   </tr>
+   </table>
+   &nbsp;
+ 
+
+
     <header id="published-stories">
-    <h3><strong>Published stories</strong></h3>
+    <button class="accordion"> <h4> <strong>All published stories</strong> </h4></button>
+    <div class="panel">
     
     
-  </header>
       
 
 
@@ -162,13 +204,15 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
     </tr>
     
   </table>
+
+      </div>
       
-  <hr style="border: 2px solid #b9117e;">
-      &nbsp;
+  &nbsp;
   
-       <header id="forthcoming-stories">
-      <h3><strong>Forthcoming stories</strong></h3>
-     
+  <header id="forthcoming-stories">
+    <button class="accordion"> <h4> <strong>Forthcoming stories</strong> </h4></button>
+    <div class="panel">
+         
       
          
       
@@ -221,8 +265,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
         </td>
     </tr>
   </table>
-  
-  
+  </div>
+  &nbsp;
   <script>
 // Script to open and close sidebar
 function w3_open() {
@@ -236,7 +280,22 @@ function w3_close() {
 }
 </script>
   
-  
+  <script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
 
 
 </div>
