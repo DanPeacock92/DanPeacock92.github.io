@@ -6,112 +6,110 @@
     <title>Your Name - Author</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(to right, #f0f4f8, #e3e9f2);
-            color: #333;
-            text-align: center;
-        }
-        .container {
-            max-width: 900px;
-            margin: 40px auto;
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-        img.profile {
-            width: 300px;
-            height: 200px;
-            border-radius: 15px;
-            object-fit: cover;
-            margin: 20px 0;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        .bio {
-            font-family: 'Merriweather', serif;
-            font-size: 1.1em;
-            color: #555;
-            margin-bottom: 40px;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        h1, h2 {
-            font-family: 'Merriweather', serif;
-            color: #c74097;
-            margin-bottom: 20px;
-        }
-        .fiction {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 30px;
-        }
-        .story-card {
-    width: 160px;
-    text-align: center;
-    background: #fff;
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    position: relative;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 2px solid #c74097;
-    display: flex;
-    flex-direction: column; /* Allow content to expand vertically */
-    justify-content: space-between; /* Push content to the top and bottom */
-    height: auto; /* Let the height adjust based on content */
-}
+    body {
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(to right, #f0f4f8, #555);
+        color: #333;
+        text-align: center;
+    }
+    .container {
+        max-width: 900px;
+        margin: 40px auto;
+        background: white;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+    img.profile {
+        width: 300px;
+        height: 200px;
+        border-radius: 15px;
+        object-fit: cover;
+        margin: 20px 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .bio {
+        font-family: 'Merriweather', serif;
+        font-size: 1.1em;
+        color: #555;
+        margin-bottom: 40px;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    h1, h2 {
+        font-family: 'Merriweather', serif;
+        color: #c74097;
+        margin-bottom: 20px;
+    }
+    .fiction {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+    }
+    .story-card {
+        width: 160px;
+        text-align: center;
+        background: #fff;
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        position: relative;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border: 2px solid #c74097;
+        display: flex;
+        flex-direction: column; /* Stack elements vertically */
+        justify-content: space-between; /* Push content to top and buttons to bottom */
+        height: auto; /* Height adjusts based on content */
+    }
+    .story-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+    .story-card img {
+        width: 150px;
+        height: 225px;
+        border-radius: 5px;
+        object-fit: cover;
+    }
+    .story-card .title {
+        font-weight: bold;
+        margin-top: 10px; /* Space between image and title */
+        color: #333;
+        text-decoration: none;
+    }
+    .story-card .description {
+        font-size: 0.9em;
+        margin-top: 10px;
+        color: #555;
+    }
+    .buttons {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: auto; /* Push buttons to the bottom */
+    }
+    .button {
+        padding: 10px 20px;
+        border-radius: 5px;
+        color: white;
+        font-weight: bold;
+        text-decoration: none;
+        text-align: center;
+        display: inline-block;
+        width: 120px;
+    }
+    .button.read {
+        background-color: #c74097;
+    }
+    .button.buy {
+        background-color: #4f88f0;
+    }
+</style>
 
-        .story-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-        .story-card img {
-            width: 150px;
-            height: 225px;
-            border-radius: 5px;
-            object-fit: cover;
-        }
-        .story-card .title {
-            font-weight: bold;
-            margin-top: 10px; /* Adding space between image and title */
-            color: #333;
-            text-decoration: none;
-        }
-        .story-card .description {
-            font-size: 0.9em;
-            margin-top: 10px;
-            color: #555;
-        }
-        .buttons {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: auto; /* Ensure the buttons stay at the bottom of the card */
-}
-
-        }
-        .button {
-            padding: 10px 20px;
-            border-radius: 5px;
-            color: white;
-            font-weight: bold;
-            text-decoration: none;
-            text-align: center;
-            display: inline-block;
-            width: 120px;
-        }
-        .button.read {
-            background-color: #c74097;
-        }
-        .button.buy {
-            background-color: #4f88f0;
-        }
-    </style>
 </head>
 <body>
 
@@ -123,16 +121,16 @@
         <h2>Short Fiction</h2>
         <div class="fiction">
             <div class="story-card">
-                <img src="story1-image.jpg" alt="Story 1">
+                <img src="ellipsism.jpg" alt="Story 1">
                 <a href="story1-link.html" class="title">Story Title 1</a>
-                <p class="description">A brief description of Story Title 1. This is a short summary of what the story is about.</p>
+                <p class="description">A brief description of Story Title 1. This is a short summary of what the story is about. A brief description of Story Title 1. This is a short summary of what the story is about.</p>
                 <div class="buttons">
                     <a href="story1-online-link.html" class="button read">Read Online</a>
                    
                 </div>
             </div>
             <div class="story-card">
-                <img src="story2-image.jpg" alt="Story 2">
+                <img src="cat.jpg" alt="Story 2">
                 <a href="story2-link.html" class="title">Story Title 2</a>
                 <p class="description">A brief description of Story Title 2. This is a short summary of what the story is about.</p>
                 <div class="buttons">
