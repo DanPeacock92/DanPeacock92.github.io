@@ -64,8 +64,9 @@ h1 {
 .profile {
     width: 150px;
     height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
+    border-radius: 50%;  /* Make it a circle */
+    object-fit: cover;   /* Ensures the image fills the circle */
+    object-position: top; /* Aligns the top of the image to the circle */
     border: 3px solid #c74097;  /* Optional: Adds a border around the image */
 }
 
