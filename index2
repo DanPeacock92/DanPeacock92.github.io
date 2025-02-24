@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stories Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .stories-container {
+            display: grid;
+            grid-template-columns: 1fr; /* Single column on mobile */
+            gap: 20px; /* Space between cards */
+            padding: 20px;
+        }
+
+        @media (min-width: 768px) { /* Switch to grid layout on desktop */
+            .stories-container {
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            }
+        }
+
+        .story-card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .story-card:hover {
+            transform: translateY(-5px); /* Moves card slightly up on hover */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .story-card img {
+            width: 100%;
+            max-height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .story-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .story-description {
+            font-size: 1rem;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Stories</h1>
+        <div class="stories-container">
+            <div class="story-card">
+                <img src="images/dark-forest.jpg" alt="A Dark and Stormy Night">
+                <div class="story-title">A Dark and Stormy Night</div>
+                <div class="story-description">Lightning split the sky as something moved in the shadows...</div>
+            </div>
+
+            <div class="story-card">
+                <img src="images/future-city.jpg" alt="Tomorrow’s End">
+                <div class="story-title">Tomorrow’s End</div>
+                <div class="story-description">In a city run by machines, one human fights to rewrite the future.</div>
+            </div>
+
+            <div class="story-card">
+                <img src="images/haunted-house.jpg" alt="The House on Blackwood Hill">
+                <div class="story-title">The House on Blackwood Hill</div>
+                <div class="story-description">They said the house was abandoned... but someone was watching.</div>
+            </div>
+
+            <div class="story-card">
+                <img src="images/deep-space.jpg" alt="Echoes from the Void">
+                <div class="story-title">Echoes from the Void</div>
+                <div class="story-description">A distress call from an uncharted planet leads to a chilling discovery.</div>
+            </div>
+
+            <div class="story-card">
+                <img src="images/magic-book.jpg" alt="The Library of Lost Souls">
+                <div class="story-title">The Library of Lost Souls</div>
+                <div class="story-description">A book sealed for centuries holds a deadly secret.</div>
+            </div>
+
+            <div class="story-card">
+                <img src="images/lab-experiment.jpg" alt="Project Prometheus">
+                <div class="story-title">Project Prometheus</div>
+                <div class="story-description">A genetic experiment gone wrong threatens the world as we know it.</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
