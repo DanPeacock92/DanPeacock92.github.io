@@ -51,16 +51,17 @@
             gap: 30px;
         }
         .story-card {
-            width: 160px;
-            text-align: center;
-            background: #fff;
-            padding: 10px;
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            position: relative;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border: 2px solid #c74097;
-        }
+    width: 160px;
+    text-align: center;
+    background: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: relative; /* Add this to make the buttons' position relative to the card */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid #c74097;
+}
+
         .story-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -83,10 +84,15 @@
             color: #555;
         }
         .buttons {
-            margin-top: 15px;
-            display: flex;
-            justify-content: center;
-            gap: 10px;
+    position: absolute; /* Position buttons absolutely inside the card */
+    bottom: 10px; /* Set the distance from the bottom of the card */
+    left: 50%;
+    transform: translateX(-50%); /* Center the buttons horizontally */
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
         }
         .button {
             padding: 10px 20px;
@@ -117,6 +123,8 @@
 <p>He lives in the UK with several other life forms: his long-suffering partner and daughter, and a second-hand cat that hoots like an owl.</p>
 <p>You can contact Dan by <b><a href="mailto:danpeacock92@gmail.com">email</a></b> or on <b><a href="https://bsky.app/profile/danpeacock.bsky.social">Bluesky</a></b>.</p></p>
 
+        &nbsp;
+        
         <h2>Short Fiction</h2>
         <div class="fiction">
             
