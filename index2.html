@@ -23,9 +23,9 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
         img.profile {
-            width: 180px;
+            width: 240px;
             height: 180px;
-            border-radius: 50%;
+            border-radius: 15px;
             object-fit: cover;
             margin: 20px 0;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -35,6 +35,11 @@
             font-size: 1.1em;
             color: #555;
             margin-bottom: 40px;
+        }
+        h1, h2 {
+            font-family: 'Merriweather', serif;
+            color: #c74097;
+            margin-bottom: 20px;
         }
         .fiction {
             display: flex;
@@ -49,9 +54,9 @@
             padding: 10px;
             border-radius: 10px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
             position: relative;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 2px solid #c74097;
         }
         .story-card:hover {
             transform: translateY(-10px);
@@ -62,10 +67,6 @@
             height: 225px;
             border-radius: 5px;
             object-fit: cover;
-            transition: transform 0.3s ease;
-        }
-        .story-card img:hover {
-            transform: scale(1.05);
         }
         .story-card .title {
             font-weight: bold;
@@ -74,18 +75,9 @@
             text-decoration: none;
         }
         .story-card .description {
-            display: none;
             font-size: 0.9em;
             margin-top: 10px;
             color: #555;
-        }
-        .story-card:hover .description {
-            display: block;
-        }
-        h1, h2 {
-            font-family: 'Merriweather', serif;
-            color: #333;
-            margin-bottom: 20px;
         }
     </style>
 </head>
@@ -93,7 +85,7 @@
 
     <div class="container">
         <h1>Your Name</h1>
-        <img src="your-photo.jpg" alt="Your Name" class="profile">
+        <img src="banner.jpg" alt="Your Name" class="profile">
         <p class="bio">Brief bio about you. Mention your genre, interests, and any notable publications.</p>
 
         <h2>Short Fiction</h2>
@@ -101,7 +93,7 @@
             <div class="story-card">
                 <a href="https://kaleidotrope.net/archives/summer-2024/ellipsism-by-dan-peacock/" class="title">
                     <img src="ellipsism.jpg" alt="Story 1">
-                    Ellipsism
+                    Story Title 1
                 </a>
                 <p class="description">A brief description of Story Title 1. This is a short summary of what the story is about.</p>
             </div>
