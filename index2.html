@@ -34,13 +34,32 @@
     padding: 20px;
 }
 
+.profile-container {
+    position: relative;
+    display: inline-block;
+}
+
 .profile {
     width: 250px;
     height: auto;
     border-radius: 15px;
     object-fit: cover;
-    filter: drop-shadow(0px 0px 40px rgba(0, 0, 0, 0.2));
+    filter: blur(10px); /* Blurs the whole image */
 }
+
+.profile-container::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 230px;
+    height: 230px;
+    background: url("peacock.png") center/cover no-repeat;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+    filter: blur(0px); /* Keeps the center sharp */
+}
+
 
 .text-container {
     flex: 1; /* Allows text to take up remaining space */
