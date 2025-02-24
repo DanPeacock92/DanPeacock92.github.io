@@ -34,16 +34,6 @@
     padding: 20px;
 }
 
-.profile {
-    width: 250px;
-    height: auto;
-    border-radius: 15px;
-    object-fit: cover;
-    position: relative;
-    mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
-    -webkit-mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
-    filter: blur(10px);  /* Optional, if you want to add more blur to the image itself */
-}
 
 
 .text-container {
@@ -145,9 +135,8 @@ h1 {
 </head>
 <body>
 
-   <div class="header-container">
-    <img src="peacock.png"  class="profile">
-    <div class="text-container">
+   <div class="header">
+        <div class="bio-container">
         <h1>Dan Peacock</h1>
         <p class="bio">Dan is a sci-fi and fantasy writer.</p>
 <p class="bio">He writes about time and space, technology's impact on the human body and mind, global ecological collapse, robots with feelings, big swords, and various combinations thereof. </p>
