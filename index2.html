@@ -47,11 +47,45 @@ h1 {
     margin-bottom: 10px;
 }
 
-.bio {
-    font-size: 1.1em;
-    color: #555;
-    line-height: 1.5;
+/* General styling for header */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
 }
+
+/* Profile image styling */
+.profile-container {
+    flex-shrink: 0;
+    margin-right: 20px;
+}
+
+.profile {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #c74097;  /* Optional: Adds a border around the image */
+}
+
+/* Bio container styling */
+.bio-container {
+    flex-grow: 1;
+}
+
+.bio-container h1 {
+    color: #c74097;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.bio-container p {
+    font-size: 1.2em;
+    color: #555; /* You can adjust the text color as needed */
+    line-height: 1.6;
+}
+
 
         
     h1, h2 {
@@ -135,16 +169,21 @@ h1 {
 </head>
 <body>
 
-   <div class="header">
-        <div class="bio-container">
+<div class="header">
+    <div class="profile-container">
+        <img src="peacock.png"  class="profile">
+    </div>
+    <div class="bio-container">
         <h1>Dan Peacock</h1>
-        <p class="bio">Dan is a sci-fi and fantasy writer.</p>
+        <p>Dan is a sci-fi and fantasy writer.</p>
 <p class="bio">He writes about time and space, technology's impact on the human body and mind, global ecological collapse, robots with feelings, big swords, and various combinations thereof. </p>
       <p class="bio">His short stories have been published in <em>F&SF, Cast of Wonders, Little Blue Marble</em>, and many other magazines and anthologies. You can find links to them all below. He lives in the UK with several other life forms: his long-suffering partner and daughter, and a second-hand cat that hoots like an owl.</p>
 <p class="bio">You can contact Dan by <b><a href="mailto:danpeacock92@gmail.com">email</a></b> or on <b><a href="https://bsky.app/profile/danpeacock.bsky.social">Bluesky</a></b>.</p></p>
     </div>
+    </div>
 </div>
 
+    
         <br>
         <br>
         <h1>Short Fiction</h1>
