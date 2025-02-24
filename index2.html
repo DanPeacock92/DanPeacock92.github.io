@@ -7,11 +7,11 @@
     <title>Dan Peacock, writer</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
     <style>
-    body {
+   body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(to right, #555, #555);
+    background: linear-gradient(to right, #grey, #555);
     color: #333;
     text-align: center;
 }
@@ -47,18 +47,27 @@ h1 {
     margin-bottom: 10px;
 }
 
-/* Bio and Profile Container */
+/* Bio Section */
 .bio-container {
-    flex-grow: 1;
     max-width: 900px; /* Match the width of the container */
     margin: 0 auto;
     text-align: left;
+    padding: 20px;
 }
 
 .bio-container p {
     font-size: 1.2em;
     color: #555;
     line-height: 1.6;
+}
+
+/* Profile Picture */
+.profile-picture {
+    width: 200px;
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
 }
 
 /* Short Fiction Section */
@@ -132,6 +141,7 @@ h1, h2 {
 .button.buy {
     background-color: #4f88f0;
 }
+
 </style>
     
 </head>
