@@ -3,77 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dan Peacock, writer</title>
+    <title>Your Name - Author</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
+            background: linear-gradient(to right, #f0f4f8, #e3e9f2);
+            color: #333;
             text-align: center;
-            background-color: #f5f5f5;
         }
         .container {
-            max-width: 800px;
-            margin: 20px auto;
+            max-width: 900px;
+            margin: 40px auto;
             background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
         img.profile {
-            width: 150px;
-            height: 150px;
+            width: 180px;
+            height: 180px;
             border-radius: 50%;
             object-fit: cover;
-            margin: 10px 0;
+            margin: 20px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         .bio {
-            margin-bottom: 30px;
+            font-family: 'Merriweather', serif;
+            font-size: 1.1em;
+            color: #555;
+            margin-bottom: 40px;
         }
         .fiction {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 20px;
+            gap: 30px;
         }
         .story-card {
-            width: 150px;
+            width: 160px;
             text-align: center;
+            background: #fff;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .story-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
         .story-card img {
             width: 150px;
             height: 225px;
             border-radius: 5px;
             object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        .story-card img:hover {
+            transform: scale(1.05);
         }
         .story-card a {
             display: block;
             text-decoration: none;
-            color: black;
+            color: #333;
             font-weight: bold;
-            margin-top: 5px;
+            margin-top: 10px;
+            transition: color 0.3s ease;
+        }
+        .story-card a:hover {
+            color: #007BFF;
+        }
+        h1, h2 {
+            font-family: 'Merriweather', serif;
+            color: #333;
+            margin-bottom: 20px;
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <h1>Dan Peacock</h1>
-        <img src="banner.jpg" alt="The Hebrides." class="profile">
-        <p class="bio"><p>Dan is a sci-fi and fantasy writer.</p>
-<p>He writes about time and space, technology's impact on the human body and mind, global ecological collapse, robots with feelings, big swords, and various combinations thereof. </p>
-       <p>His short stories have been published in <em>F&SF, Cast of Wonders, Little Blue Marble</em>, and many other magazines and anthologies. You can find links to them all below.
-<p>He lives in the UK with several other life forms: his long-suffering partner and daughter, and a second-hand cat that hoots like an owl.</p>
-<p>You can contact Dan by <b><a href="mailto:danpeacock92@gmail.com">email</a></b> or on <b><a href="https://bsky.app/profile/danpeacock.bsky.social">Bluesky</a></b>.</p></p>
+        <h1>Your Name</h1>
+        <img src="banner.jpg" alt="Your Name" class="profile">
+        <p class="bio">Brief bio about you. Mention your genre, interests, and any notable publications.</p>
 
         <h2>Short Fiction</h2>
         <div class="fiction">
             <div class="story-card">
-                <a href="https://kaleidotrope.net/summer-2024/ellipsism-by-dan-peacock">
-                    <img src="ellipsism.jpg" alt="Ellipsism">
+                <a href="https://kaleidotrope.net/archives/summer-2024/ellipsism-by-dan-peacock/">
+                    <img src="ellipsism.jpg" alt="Story 1">
                     Ellipsism
                 </a>
-                <p>After a spaceship captain falls into a supermassive black hole, her old crew gather to say a final goodbye. </p>
+                <p>After a spaceship captain falls into a supermassive black hole, her old crew gather to say a final goodbye.</p>
             </div>
             <div class="story-card">
                 <a href="story2-link.html">
