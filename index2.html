@@ -70,10 +70,14 @@
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     }
     .story-card img {
-        width: 150px;
-        height: 225px;
-        border-radius: 5px;
-        object-fit: cover;
+    width: 150px;
+    height: 225px;
+    border-radius: 5px;
+    object-fit: cover;
+    display: block; /* Ensures the image is treated as a block element */
+    margin: 0 auto; /* Centers the image horizontally */
+}
+
     }
     .story-card .title {
         font-weight: bold;
