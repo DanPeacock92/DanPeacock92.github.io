@@ -157,7 +157,17 @@ h1, h2 {
     overflow: hidden;         /* Prevent text from overflowing */
 }
 
+@media (max-width: 600px) {
+    .fiction {
+        max-width: 100%; /* Let it expand to full width */
+        padding: 0 10px; /* Ensure space on sides */
+    }
 
+    .bio-container {
+        margin: 0 10px; /* Add a thin margin on mobile */
+        padding: 15px; /* Ensure spacing inside */
+    }
+}
 
 .button.read {
     background-color: #c74097;
