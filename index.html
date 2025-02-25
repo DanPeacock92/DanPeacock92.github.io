@@ -91,10 +91,10 @@ background-color: white;        /* White background for the bio container */
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 30px;
+    gap: 25px;
     max-width: 900px; /* Restrict width for larger screens */
     margin: 0 auto;
-    padding: 0 px; /* Adds padding on smaller screens. */
+    padding: 0 15px; /* Adds padding on smaller screens. Just added */
 }
 
         
@@ -158,14 +158,17 @@ h1, h2 {
     overflow: hidden;         /* Prevent text from overflowing */
 }
 
-/* Mobile-specific adjustments */
 @media (max-width: 600px) {
-    .story-card {
-        width: 48% !important; /* Force 2 per row */
-        display: inline-block !important;
+    .fiction {
+        max-width: 100%; /* Let it expand to full width */
+        padding: 0 5px; /* Ensure space on sides */
+    }
+
+    .bio-container {
+        margin: 0 10px; /* Add a thin margin on mobile */
+        padding: 15px; /* Ensure spacing inside */
     }
 }
-
 
 .button.read {
     background-color: #c74097;
