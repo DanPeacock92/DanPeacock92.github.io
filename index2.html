@@ -93,6 +93,15 @@ background-color: white;        /* White background for the bio container */
     margin: 0 auto;
 }
 
+.story-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjusts dynamically */
+  gap: 20px; /* Space between cards */
+  max-width: 1200px; /* Prevents it from being too wide on large screens */
+  margin: 0 auto; /* Centers the grid */
+  padding: 0 10px; /* Adds a bit of space on the sides */
+}
+        
 .story-card {
     width: 160px;
     text-align: center;
