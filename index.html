@@ -160,20 +160,12 @@ h1, h2 {
 
 /* Mobile-specific adjustments */
 @media (max-width: 600px) {
-    .fiction {
-        max-width: 100%;
-        padding: 0 10px;
-    }
-
     .story-card {
-        width: calc(50% - 10px); /* Two cards per row on smaller screens */
-    }
-
-    .bio-container {
-        margin: 0 10px;
-        padding: 15px;
+        width: 48% !important; /* Force 2 per row */
+        display: inline-block !important;
     }
 }
+
 
 .button.read {
     background-color: #c74097;
