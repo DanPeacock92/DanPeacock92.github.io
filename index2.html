@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -73,7 +74,6 @@ background-color: white;        /* White background for the bio container */
 .profile-container {
     flex-shrink: 0;
     margin-right: 20px;
-    background-color: #b9e3e3
 }
 
 .profile {
@@ -86,15 +86,16 @@ background-color: white;        /* White background for the bio container */
 }
 
 /* Short Fiction Section */
+
 .fiction {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
-    max-width: 900px; /* Restrict width for story cards */
+    max-width: 1000px; /* Restrict width for larger screens */
     margin: 0 auto;
+    padding: 0 15px; /* Adds padding on smaller screens. Just added */
 }
-
 
         
 .story-card {
@@ -157,7 +158,17 @@ h1, h2 {
     overflow: hidden;         /* Prevent text from overflowing */
 }
 
+@media (max-width: 600px) {
+    .fiction {
+        max-width: 100%; /* Let it expand to full width */
+        padding: 0 5px; /* Ensure space on sides */
+    }
 
+    .bio-container {
+        margin: 0 10px; /* Add a thin margin on mobile */
+        padding: 15px; /* Ensure spacing inside */
+    }
+}
 
 .button.read {
     background-color: #c74097;
@@ -180,7 +191,7 @@ h1, h2 {
 <div class="bio-container">
     <h1>Dan Peacock</h1>
     <br>
-    <img src="peacock.png" class="profile">
+    <img src="peacockbackground.png" class="profile">
     <br>
     <p>Dan is a sci-fi and fantasy writer.</p>
     
