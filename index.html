@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +13,33 @@
     padding: 0;
     background: linear-gradient(to right, #b9e3e3, #e0b9e3);
     color: #333;
-    text-align: center;
+    text-align: center;}
+
+  nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 2rem auto;
+  flex-wrap: wrap;
+}
+
+.nav-button {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  font-family: 'Merriweather', serif;
+  font-weight: bold;
+  color: #c74097;
+  text-decoration: none;
+  border: 2px solid #c74097;
+  border-radius: 8px;
+  background: none;              /* remove background */
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.nav-button:hover {
+  background: #fff;              /* optional: white on hover */
+  transform: translateY(-2px);
+  text-decoration: none;
 }
 
 .container {
@@ -32,6 +57,7 @@
     align-items: center;
     justify-content: center;
     gap: 30px;
+    font-family: 'Roboto', sans-serif;
     max-width: 900px; /* Ensure it matches the container */
     margin: 40px auto;
     padding: 20px;
@@ -43,29 +69,35 @@
     text-align: left;
 }
 
+       
+
+
 h1 {
     color: #c74097;
     margin-bottom: 10px;
+    font-family: 'Merriweather', serif;
 }
 
 /* Bio Section */
 .bio-container {
-background-color: white;        /* White background for the bio container */
-    border: 2px solid #c74097;      /* Pink outline with 2px thickness */
-    padding: 20px;                  /* Add some space inside the container */
-    margin-bottom: 20px;            /* Optional: space below the bio container */
-    border-radius: 10px;            /* Optional: rounded corners for a smoother look */
-    max-width: 900px; /* Keep it consistent with the container */
-    margin: 0 auto;
-        padding: 20px;
-    padding-left: 40px;  /* Adds space to the left side */
-    padding-right: 40px; /* Adds space to the right side */
-    
+  background-color: white;
+  border: 2px solid #c74097;
+  border-radius: 10px;
+  font-family: 'Roboto', sans-serif;
+
+  padding: 20px 40px;
+  margin: 0 auto 20px auto;
+
+  max-width: 1000px;     /* Match .fiction max width */
+  width: 100%;           /* Allow scaling on smaller screens */
+  box-sizing: border-box; /* Prevent padding from overflowing */
 }
+
 
 
 .bio-container p {
     font-size: 1.2em;
+    font-family: 'Roboto', sans-serif;
     color: #555;
     line-height: 1.6;
 }
@@ -85,48 +117,52 @@ background-color: white;        /* White background for the bio container */
     border: 3px solid #c74097;  /* Optional: Adds a border around the image */
 }
 
-/* Short Fiction Section */
-
 .fiction {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-    max-width: 1000px; /* Restrict width for larger screens */
-    margin: 0 auto;
-    padding: 0 15px; /* Adds padding on smaller screens. Just added */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 
-        
 .story-card {
-    width: 160px;
-    text-align: center;
-    background: #fff;
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    position: relative;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 2px solid #c74097;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: auto;
-}
-
-.story-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  flex: 1 1 160px; /* Grow/shrink but start at 160px */
+  max-width: 200px; /* Prevent cards from getting too wide */
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  background: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid #c74097;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .story-card img {
-    width: 150px;
-    height: 225px;
-    border-radius: 5px;
-    object-fit: cover;
-    display: block;
-    margin: 0 auto;
+  width: 150px;
+  height: 225px;
+  object-fit: cover; /* Crop to fit the box */
+  border-radius: 5px;
+  display: block;
+  margin: 0 auto 10px auto;
 }
+
+
+
+
+/* Optional: On *small* screens, ensure 2 columns instead of 1 */
+@media (max-width: 600px) {
+  .story-card {
+    flex: 0 1 calc(50% - 20px); /* 2 cards per row, accounting for gap */
+  }
+}
+
 
 h1, h2 {
     font-family: 'Merriweather', serif;
@@ -136,6 +172,7 @@ h1, h2 {
 
 .buttons {
     display: flex;
+    font-family: 'Roboto', sans-serif;
     justify-content: center;
     gap: 10px;
     margin-top: auto;
@@ -153,6 +190,7 @@ h1, h2 {
     border-radius: 5px;
     font-size: 16px;          /* Adjust the font size as needed */
     font-weight: bold;        /* Make the button text bold */
+    font-family: 'Roboto', sans-serif;
     box-sizing: border-box;   /* Ensure padding and borders are included in width/height */
     text-align: center;       /* Ensure text is centered horizontally */
     overflow: hidden;         /* Prevent text from overflowing */
@@ -180,23 +218,46 @@ h1, h2 {
 
 .button.forthcoming {
     background-color: #097969
+}
+.story-link,
+.story-link:visited,
+.story-link:hover,
+.story-link:active {
+  color: #c74097;
+  text-decoration: none;
+  font-weight: italic;
+}
 
-        
+.story-link:hover {
+  text-decoration: underline;
+}
+
+       
 
 </style>
     
+    
 </head>
+    <br>
 <body>
+     
 <br>
 <div class="bio-container">
+     <nav>
+  <a href="/" class="nav-button">Home</a>
+  <a href="/stories" class="nav-button">Stories</a>
+  <a href="/press" class="nav-button">Press</a>
+</nav>
+ 
     <h1>Dan Peacock</h1>
-    <br>
     <img src="peacockbackground.png" class="profile">
-    <br>
-    <p>Dan is a sci-fi and fantasy writer.</p>
-    
-    <p class="bio">His short stories have been published in <em>F&SF, Cast of Wonders, Metastellar</em>, and many other magazines and anthologies. You can find links to them all below. He lives in the UK with several other life forms: his long-suffering partner and daughter, and a second-hand cat that doesn't work properly.</p>
-    <p class="bio">You can contact Dan on <b><a href="https://www.instagram.com/dan.peacock.writer/">Instagram</a></b>, <b><a href="https://bsky.app/profile/danpeacock.bsky.social">Bluesky</a></b>, or by <b><a href="mailto:danpeacock92@gmail.com">email</a></b>.</p>
+    <p class="bio">Dan is a sci-fi and fantasy writer.</p>
+        <p class="bio">His short stories have been published in <em>F&SF, Cast of Wonders, Metastellar</em>, and many other magazines and anthologies. You can find links to them all on the <a href="https://danpeacockwriter.com/stories" class="story-link">Stories</a> page. </p>
+            <p class="bio"> He lives in the UK with several other life forms: his long-suffering partner and daughter, and a second-hand cat that doesn't work properly.</p>
+   
+ <p class=bio>You can contact Dan on <a href="https://www.instagram.com/dan.peacock.writer/" class="story-link">Instagram</a>, <a href="https://bsky.app/profile/danpeacock.bsky.social" class="story-link">Bluesky</a>, or by <a href="mailto:danpeacock92@gmail.com" class="story-link">email</a>.</p>
+ 
+
 </div>
 
 
@@ -204,247 +265,6 @@ h1, h2 {
         <br>
     
     
-
-        <div class="fiction">
-<div class="story-card">
-                <img src="flight.jpg">
-                <br>
-                <strong>Take Flight</strong>
-                <br>
-                <p class="description">On a half-abandoned future Earth, an ornithologist discovers a critically endangered bird nesting beneath a spaceport launch pad.</p>
-                <div class="buttons">
-               <a href="https://kaleidotrope.net/" class="button forthcoming">Coming to Kaleidotrope in 2026</a>
-                </div>
-            </div>
-
-            <div class="story-card">
-                <img src="IMG_4449.jpeg">
-                <br>
-                <strong>The Cat That Went To Uranus</strong>
-                <br>
-                <p class="description">After stowing away aboard the first manned mission to Uranus, a little black cat quickly becomes a nuisance.</p>
-                <div class="buttons">
-             <a href="https://www.castofwonders.org/" class="button forthcoming">Coming soon to Cast of Wonders</a>
-                </div>
-            </div>
-
-<div class="story-card">
-                <img src="protagonist.jpg">
-                <br>
-                <strong>What To Do When A Protagonist Visits Your Generic Village</strong>
-                <br>
-                <p class="description">You've heard this story before.</p>
-                <p><em>Originally published in F&SF</em></p>
-                <div class="buttons">
-                
-                    <a href="https://www.metastellar.com/fiction/what-to-do-when-a-protagonist-visits-your-generic-village//" class="button read">Read online in Metastellar</a>
-                </div>
-            </div>
-
-
-            
-<div class="story-card">
-                <img src="eldritch.jpg">
-                <br>
-                <strong>It’s Not You, Or The Eldritch Entities Wiping Out San Francisco, It’s Me</strong>
-                <br>
-                <p class="description">As dark forces enter our dimension, a dissatisfied girlfriend decides that enough is enough.</p>
-                <div class="buttons">
-             <a href="https://www.dreamtheory.media/its-not-you-or-the-eldritch-entities-wiping-out-san-francisco-its-me/" class="button read">Read online in Dream Theory Media</a>
-                </div>
-            </div>
-            
-<div class="story-card">
-                <img src="firestarter.jpg">
-                <br>
-                <strong>Firestarter</strong>
-                <br>
-                <p class="description">A disgraced satellite technician must confront her past when she is paired with a new recruit.</p>
-                <div class="buttons">
-             <a href="https://www.phano.co/articles/firestarter" class="button read">Read online in Phano</a>
-                </div>
-            </div>
-            
-            
- <div class="story-card">
-                <img src="IMG_4455.jpeg">
-                <br>
-                <strong>Re: Re: Re: Re: Re: Your Short Story Submission's Attachment</strong>
-                <br>
-                <p class="description">A story submission to a magazine goes very, very wrong.</p>
-                <div class="buttons">
-             <a href="https://www.pointsincase.com/articles/re-re-re-re-re-your-short-story-submissions-attachment" class="button read">Read online in Points In Case</a>
-                </div>
-            </div>
-
-            
-            <div class="story-card">
-                <img src="takura.jpg">
-                <br>
-                <strong>User's Guide To Your Takura Temporal Vehicle</strong>
-                <br>
-                <p class="description">Please read the enclosed information carefully before attempting temporal transit. There will be no refunds.</p>
-                <div class="buttons">
-             <a href="https://ift.tt/ejEaCpk" class="button read">Read online in Sci-Fi Shorts</a>
-                </div>
-            </div>
-            
- <div class="story-card">
-                <img src="ellipsism.jpg">
-                <br>
-                <strong>Ellipsism</strong>
-                <br>
-                <p class="description">When a spaceship captain falls into a supermassive black hole, her old crew come home to say a final goodbye.</p>
-                <div class="buttons">
-              <a href="https://kaleidotrope.net/archives/summer-2024/ellipsism-by-dan-peacock/" class="button read">Read online in Kaleidotrope</a>
-                </div>
-            </div>
-
-            <div class="story-card">
-                <img src="cat.jpg">
-                <br>
-                <strong>The Cat That Worked From Home</strong>
-                <br>
-                <p class="description">Macaroni is a very important business cat. He has a little laptop with little buttons for his little paws.</p>
-                <div class="buttons">
-              <a href="https://www.castofwonders.org/2024/04/cast-of-wonders-583-the-cat-that-worked-from-home" class="button read">Read online in Cast of Wonders</a>
-                </div>
-            </div>
-            
-            <div class="story-card">
-                <img src="generation.jpg">
-                <br>
-                <strong>Generation</strong>
-                <br>
-                <p class="description">In a dystopian future, a desperate mother attempts to smuggle her illegal child past Border Enforcement.</p>
-                <div class="buttons">
-                    <a href="https://www.thedreadmachine.com/generation/" class="button read">Read online in The Dread Machine</a>
-                    
-                </div>
-            </div>
-
-            <div class="story-card">
-                <img src="terminal.jpg">
-                <br>
-                <strong>Terminal Accord</strong>
-                <br>
-                <p class="description">A group of cancer-stricken astronauts embark on a one-way trip to Enceladus.</p>
-                <div class="buttons">
-                    <a href="https://calliope.page.link/Z2HiAjsk9wEShiGM9" class="button buy">Buy in the Calliope Stories app</a>
-                </div>
-            </div>
-
-            <div class="story-card">
-                <img src="italic.jpg">
-                <br>
-                <strong>Italic & Bold</strong>
-                <br>
-                <p class="description">Two damaged robots discuss matters of great importance.</p>
-                <div class="buttons">
-                    <a href="https://www.heartlines-spec.com/italic-bold-by-dan-peacock/" class="button read">Read online in Heartlines Spec</a>
-                   
-                </div>
-            </div>
-
-            <div class="story-card">
-                <img src="bound.jpg">
-                <br>
-                <strong>Bound</strong>
-                <br>
-                <p class="description">No-one can prepare you for living with your demons.</p>
-                <div class="buttons">
-                    
-                      <a href="https://www.amazon.co.uk/Uncanny-Unearthly-Tales-Grendel-Anthology/dp/1960534068" class="button buy">Buy from Grendel Press</a>
-                </div>
-            </div>
-
-            <div class="story-card">
-                <img src="virologist.jpg">
-                <br>
-                <strong>The Smiling Virologist</strong>
-                <br>
-                <p class="description">A documentary crew uncovers the truth behind a very unusual pandemic.</p>
-                <div class="buttons">
-                    <a href="https://littlebluemarble.ca/2023/08/11/the-smiling-virologist/" class="button read">Read online in Little Blue Marble</a>
-                  
-                </div>
-            </div>
-
-            <div class="story-card">
-                <img src="Eternity.jpg">
-                <br>
-                <strong>Eternity Park</strong>
-                <br>
-                <p class="description">As the biosphere collapses, a young girl explores a pristine VR copy of Earth.</p>
-                <div class="buttons">
-                    <a href="https://cosmorama.site/fiction/eternitypark" class="button read">Read online in Cosmorama</a>
-                    
-                </div>
-            </div>
-
-            
-            <div class="story-card">
-                <img src="ice.jpg">
-                <br>
-                <strong>The Ice Tunnel Closes</strong>
-                <br>
-                <p class="description">A 100-word Antarctic horror story.</p>
-                <div class="buttons">
-                    <a href="https://www.blackharepress.com/ice-tunnel-closes/" class="button read">Read online in Black Hare Press</a>
-                    
-                </div>
-            </div>
-
-            <div class="story-card">
-                <img src="worlds.jpg">
-                <br>
-                <strong>For All The Worlds You'll Make</strong>
-                <br>
-                <p class="description">A tale of childhood friendship in the final years of a dying Earth.</p>
-                <div class="buttons">
-                    
-                    <a href="https://www.amazon.com/dp/B0C1W9Y97K" class="button buy">Buy from The Colored Lens</a>
-                </div>
-            </div>
-
-            <div class="story-card">
-                <img src="citation2.jpeg">
-                <br>
-                <strong>They Came From Outer Space [Citation Needed]</strong>
-                <br>
-                <p class="description">Alien invaders are wiping out civilisation, but Wikipedia still needs updating...</p>
-                <div class="buttons">
-                    <a href="https://www.thedreadmachine.com/they-came-from-outer-space-citation-needed/" class="button read">Read online in The Dread Machine</a>
-                    
-                </div>
-            </div>
-
-            <div class="story-card">
-                <img src="tidallock.jpg">
-                <br>
-                <strong>The Tidal Lock</strong>
-                <br>
-                <p class="description">After Earth stops turning, a water courier's truck breaks down in an inhospitable desert.</p>
-                <p><em>Originally published in Interstellar Fiction</em></p>
-                <div class="buttons">
-                   
-                    <a href="https://ethereamagazine.com/product/etherea-magazine-16/" class="button buy">Buy from Etherea</a>
-                </div>
-            </div>
-
-            <div class="story-card">
-                <img src="testament.jpg">
-                <br>
-                <strong>Testament</strong>
-                <br>
-                <p class="description">An interstellar traveler uncovers clues about the past of a once-inhabited planet.</p>
-                <div class="buttons">
-                    <a href="https://inksweatandtears.co.uk/archive/dan-peacock/" class="button read">Read online in Ink, Sweat & Tears</a>
-                    
-                </div>
-            </div>
-
-            
             <!-- Add more story cards as needed -->
         </div>
     </div>
