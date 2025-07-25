@@ -17,25 +17,31 @@
     text-align: center;}
 
   nav {
-    font-family: 'Roboto', sans-serif;
-    font-size: 14
-      
-    text-align: center;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-  }
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 2rem auto;
+  flex-wrap: wrap;
+}
 
-  nav a {
-    text-decoration: none;
-    color: #c74097 ;
-    margin: 0 0.5rem;
-  }
+.nav-button {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  font-family: 'Merriweather', serif;
+  font-weight: bold;
+  color: #c74097;
+  text-decoration: none;
+  border: 2px solid #c74097;
+  border-radius: 8px;
+  background: none;              /* remove background */
+  transition: background 0.3s ease, transform 0.2s ease;
+}
 
-  nav a:hover {
-    text-decoration: underline;
-  }
-
-   
+.nav-button:hover {
+  background: #fff;              /* optional: white on hover */
+  transform: translateY(-2px);
+  text-decoration: none;
+}
 
 .container {
     max-width: 900px; /* Sets a max width for the overall content */
@@ -70,6 +76,7 @@
 h1 {
     color: #c74097;
     margin-bottom: 10px;
+    font-family: 'Merriweather', serif;
 }
 
 /* Bio Section */
@@ -139,13 +146,16 @@ h1 {
 }
 
 .story-card img {
-  width: 100%;
-  height: auto;
+  width: 150px;
+  height: 225px;
+  object-fit: cover; /* Crop to fit the box */
   border-radius: 5px;
-  object-fit: cover;
   display: block;
   margin: 0 auto 10px auto;
 }
+
+
+
 
 /* Optional: On *small* screens, ensure 2 columns instead of 1 */
 @media (max-width: 600px) {
@@ -156,7 +166,7 @@ h1 {
 
 
 h1, h2 {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Merriweather', serif;
     color: #c74097;
     margin-bottom: 20px;
 }
