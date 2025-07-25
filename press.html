@@ -1,1 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png" href="/favicon.png"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dan Peacock, writer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+   body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #b9e3e3, #e0b9e3);
+    color: #333;
+    text-align: center;}
+
+  nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 2rem auto;
+  flex-wrap: wrap;
+}
+
+.nav-button {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  font-family: 'Merriweather', serif;
+  font-weight: bold;
+  color: #c74097;
+  text-decoration: none;
+  border: 2px solid #c74097;
+  border-radius: 8px;
+  background: none;              /* remove background */
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.nav-button:hover {
+  background: #fff;              /* optional: white on hover */
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+.container {
+    max-width: 900px; /* Sets a max width for the overall content */
+    margin: 40px auto;
+    background: #f7f7f7;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Header and Bio Styling */
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    font-family: 'Roboto', sans-serif;
+    max-width: 900px; /* Ensure it matches the container */
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.text-container {
+    flex: 1;
+    max-width: 500px;
+    text-align: left;
+}
+
+       
+
+
+h1 {
+    color: #c74097;
+    margin-bottom: 10px;
+    font-family: 'Merriweather', serif;
+}
+
+/* Bio Section */
+.bio-container {
+  background-color: white;
+  border: 2px solid #c74097;
+  border-radius: 10px;
+  padding: 20px 20px;
+  font-family: 'Roboto', sans-serif;
+  margin: 20px auto;
+  max-width: 900px;
+  width: 95%;          /* allows shrinking on smaller screens */
+  box-sizing: border-box;
+}
+
+
+
+.bio-container p {
+    font-size: 1.2em;
+    font-family: 'Roboto', sans-serif;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Profile image styling */
+.profile-container {
+    flex-shrink: 0;
+    margin-right: 20px;
+}
+
+.profile {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;  /* Make it a circle */
+    object-fit: cover;   /* Ensures the image fills the circle */
+    object-position: top; /* Aligns the top of the image to the circle */
+    border: 3px solid #c74097;  /* Optional: Adds a border around the image */
+}
+
+.fiction {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.story-card {
+  flex: 1 1 160px; /* Grow/shrink but start at 160px */
+  max-width: 200px; /* Prevent cards from getting too wide */
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  background: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid #c74097;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.story-card img {
+  width: 150px;
+  height: 225px;
+  object-fit: cover; /* Crop to fit the box */
+  border-radius: 5px;
+  display: block;
+  margin: 0 auto 10px auto;
+}
+
+
+
+
+/* Optional: On *small* screens, ensure 2 columns instead of 1 */
+@media (max-width: 600px) {
+  .story-card {
+    flex: 0 1 calc(50% - 20px); /* 2 cards per row, accounting for gap */
+  }
+}
+
+
+h1, h2 {
+    font-family: 'Merriweather', serif;
+    color: #c74097;
+    margin-bottom: 20px;
+}
+
+.buttons {
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+    justify-content: center;
+    gap: 10px;
+    margin-top: auto;
+}
+
+.button {
+    width: 200px;             /* Fixed width */
+    height: 80px;             /* Fixed height */
+    display: flex;            /* Enable flexbox */
+    justify-content: center;  /* Horizontally center the text */
+    align-items: center;      /* Vertically center the text */
+    padding: 0 15px;          /* Add padding to left and right */
+       color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;          /* Adjust the font size as needed */
+    font-weight: bold;        /* Make the button text bold */
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;   /* Ensure padding and borders are included in width/height */
+    text-align: center;       /* Ensure text is centered horizontally */
+    overflow: hidden;         /* Prevent text from overflowing */
+}
+
+@media (max-width: 600px) {
+    .fiction {
+        max-width: 100%; /* Let it expand to full width */
+        padding: 0 5px; /* Ensure space on sides */
+    }
+
+    .bio-container {
+        margin: 0 10px; /* Add a thin margin on mobile */
+        padding: 15px; /* Ensure spacing inside */
+    }
+}
+
+.button.read {
+    background-color: #c74097;
+}
+
+.button.buy {
+    background-color: #4f88f0;
+}
+
+.button.forthcoming {
+    background-color: #097969
+}
+.story-link,
+.story-link:visited,
+.story-link:hover,
+.story-link:active {
+  color: #c74097;
+  text-decoration: none;
+  font-weight: italic;
+}
+
+.story-link:hover {
+  text-decoration: underline;
+}
+
+       
+
+</style>
+    
+    
+</head>
+    <br>
+<body>
+     
+<br>
+<div class="bio-container">
+     <nav>
+  <a href="/" class="nav-button">Home</a>
+  <a href="/stories" class="nav-button">Stories</a>
+  <a href="/press" class="nav-button">Press</a>
+</nav>
+ 
+    <h1>Press</h1>
+   
+    
+   
+ <p class=bio><a href="https://kaleidotrope.net/archives/summer-2024/ellipsism-by-dan-peacock/" class="story-link">"Ellipsism"</a> reviewed in <a href="https://locusmag.com/2024/10/giganotosaurus-diabolical-plots-kaleidotrope-and-small-wonders-short-fiction-reviews-by-charles-payseur/?utm_source=bluesky&utm_medium=social&utm_campaign=fedica-RSS" class="story-link">Locus Magazine</a>
+<p><em>"...a wrenching story about a spaceship captain who ends up in a black hole, and all the people who are left behind, like the narrator who had once been her engineer, and the friends they had grown up together with. Peacock builds up a strong cast around the absence they all feel, made more difficult by the large role the captain played in getting all of them out of the generational cycles they had been in and out among the stars. She dragged them behind her, a star they all were in orbit of, but as they began to grow more distant – more successful but less together – that gravity perhaps had only one way to go."</em></p>
+  <br>
+   <p class=bio><a href="https://www.heartlines-spec.com/italic-bold-by-dan-peacock/" class="story-link">"Italic & Bold"</a> reviewed in <a href="https://reactormag.com/nine-sff-short-stories-that-explore-the-meaning-of-love/">Reactor Magazine</a>
+ <p><em>"Two robots, Italic and Bold, are walking through the wreckage of cars on a highway, debating which foods can be categorized as soups or sandwiches, trying to make their way to their destination in time. Every time I start thinking that I prefer humans over robots, I end up finding a story that has me laughing with and crying about the latter. And this one is perhaps my favorite: A wonderful little tale that could be about friendship or about love, showcasing enviably clever writing."</em></p>
+     <br>
+   <p class=bio><a href="https://www.metastellar.com/fiction/what-to-do-when-a-protagonist-visits-your-generic-village/" class="story-link">"What To Do When A Protagonist Visits Your Generic Village"</a> reviewed in <a href="https://amazingstories.com/2023/06/review-the-magazine-of-fantasy-science-fiction-jul-aug-2023/" class="story-link">Amazing Stories</a>
+<p><em>"If I’ve said it once, I must have said it a thousand times: I love tropes. The more the better. You can’t beat ‘em.  Well, if YOU feel the same way, then, What to Do When a Protagonist Visits Your Generic Village, by Dan Peacock, will be right up your street.I grinned from ear to ear throughout, as Peacock is bound to ruffle few feathers by giving us a story, filled to the proverbial brim with overused tropes! As you’ll find out, it’s awesomely entertaining. So, why not do what I did and nip down to your local tavern and raise a cup to a tale well told. (What to Do When a Protagonist Visits Your Generic Village: So gloriously bad, it’s brilliant – and you’ll wish you’d thought of doing it first!)"</em></p>
+</div>
+
+
+    
+        <br>
+    
+    
+            <!-- Add more story cards as needed -->
+        </div>
+    </div>
+
+            <br>
+            <br>
+
+</body>
+</html>
 
