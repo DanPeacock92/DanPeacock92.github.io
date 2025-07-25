@@ -87,7 +87,7 @@ background-color: white;        /* White background for the bio container */
     font-family: 'Roboto', sans-serif;
     max-width: 750px;   /* constrain width on large screens */
   width: 95%;        /* allow it to shrink on small screens */
-
+   box-sizing: border-box; /* include padding in width */
     
 }
 
@@ -114,49 +114,49 @@ background-color: white;        /* White background for the bio container */
     border: 3px solid #c74097;  /* Optional: Adds a border around the image */
 }
 
-/* Short Fiction Section */
-
 .fiction {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-    max-width: 1000px; /* Restrict width for larger screens */
-    margin: 0 auto;
-    padding: 0 15px; /* Adds padding on smaller screens. Just added */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 
-        
 .story-card {
-    width: 160px;
-    text-align: center;
-    font-family: 'Roboto', sans-serif;
-    background: #fff;
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    position: relative;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 2px solid #c74097;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: auto;
-}
-
-.story-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  flex: 1 1 160px; /* Grow/shrink but start at 160px */
+  max-width: 200px; /* Prevent cards from getting too wide */
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  background: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid #c74097;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .story-card img {
-    width: 150px;
-    height: 225px;
-    border-radius: 5px;
-    object-fit: cover;
-    display: block;
-    margin: 0 auto;
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 10px auto;
 }
+
+/* Optional: On *small* screens, ensure 2 columns instead of 1 */
+@media (max-width: 600px) {
+  .story-card {
+    flex: 0 1 calc(50% - 20px); /* 2 cards per row, accounting for gap */
+  }
+}
+
 
 h1, h2 {
     font-family: 'Merriweather', serif;
