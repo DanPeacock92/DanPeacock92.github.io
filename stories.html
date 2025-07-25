@@ -18,11 +18,15 @@
 
   nav {
   display: flex;
+  flex-wrap: wrap;         /* allows wrapping on small screens */
   justify-content: center;
-  gap: 20px;
+  gap: 10px 20px;          /* smaller spacing on wrap */
   margin: 2rem auto;
-  flex-wrap: wrap;
+  max-width: 100%;         /* make sure nav doesn't overflow */
+  padding: 0 10px;
+  box-sizing: border-box;
 }
+
 
 .nav-button {
   padding: 10px 20px;
