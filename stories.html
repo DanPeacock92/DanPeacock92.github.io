@@ -140,12 +140,13 @@ h1 {
 
 .story-card img {
   width: 100%;
-  height: auto;
+  height: 150px;       /* fixed height */
+  object-fit: cover;   /* crop & fill */
   border-radius: 5px;
-  object-fit: cover;
   display: block;
   margin: 0 auto 10px auto;
 }
+
 
 /* Optional: On *small* screens, ensure 2 columns instead of 1 */
 @media (max-width: 600px) {
