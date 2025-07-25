@@ -1,1 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png" href="/favicon.png"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dan Peacock, writer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+   body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #b9e3e3, #e0b9e3);
+    color: #333;
+    text-align: center;}
 
+  nav {
+    font-family: 'Roboto', sans-serif;
+    font-size: h2
+      
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: #c74097 ;
+    margin: 0 0.5rem;
+  }
+
+  nav a:hover {
+    text-decoration: underline;
+  }
+
+   
+
+.container {
+    max-width: 900px; /* Sets a max width for the overall content */
+    margin: 40px auto;
+    background: #f7f7f7;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Header and Bio Styling */
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    font-family: 'Roboto', sans-serif;
+    max-width: 900px; /* Ensure it matches the container */
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.text-container {
+    flex: 1;
+    max-width: 500px;
+    text-align: left;
+}
+
+       
+
+
+h1 {
+    color: #c74097;
+    margin-bottom: 10px;
+}
+
+/* Bio Section */
+.bio-container {
+  background-color: white;
+  border: 2px solid #c74097;
+  border-radius: 10px;
+  font-family: 'Roboto', sans-serif;
+
+  padding: 20px 40px;
+  margin: 0 auto 20px auto;
+
+  max-width: 1000px;     /* Match .fiction max width */
+  width: 100%;           /* Allow scaling on smaller screens */
+  box-sizing: border-box; /* Prevent padding from overflowing */
+}
+
+
+
+.bio-container p {
+    font-size: 1.2em;
+    font-family: 'Roboto', sans-serif;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Profile image styling */
+.profile-container {
+    flex-shrink: 0;
+    margin-right: 20px;
+}
+
+.profile {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;  /* Make it a circle */
+    object-fit: cover;   /* Ensures the image fills the circle */
+    object-position: top; /* Aligns the top of the image to the circle */
+    border: 3px solid #c74097;  /* Optional: Adds a border around the image */
+}
+
+.fiction {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.story-card {
+  flex: 1 1 160px; /* Grow/shrink but start at 160px */
+  max-width: 200px; /* Prevent cards from getting too wide */
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  background: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid #c74097;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.story-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 10px auto;
+}
+
+/* Optional: On *small* screens, ensure 2 columns instead of 1 */
+@media (max-width: 600px) {
+  .story-card {
+    flex: 0 1 calc(50% - 20px); /* 2 cards per row, accounting for gap */
+  }
+}
+
+
+h1, h2 {
+    font-family: 'Roboto', sans-serif;
+    color: #c74097;
+    margin-bottom: 20px;
+}
+
+.buttons {
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+    justify-content: center;
+    gap: 10px;
+    margin-top: auto;
+}
+
+.button {
+    width: 200px;             /* Fixed width */
+    height: 80px;             /* Fixed height */
+    display: flex;            /* Enable flexbox */
+    justify-content: center;  /* Horizontally center the text */
+    align-items: center;      /* Vertically center the text */
+    padding: 0 15px;          /* Add padding to left and right */
+       color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;          /* Adjust the font size as needed */
+    font-weight: bold;        /* Make the button text bold */
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;   /* Ensure padding and borders are included in width/height */
+    text-align: center;       /* Ensure text is centered horizontally */
+    overflow: hidden;         /* Prevent text from overflowing */
+}
+
+@media (max-width: 600px) {
+    .fiction {
+        max-width: 100%; /* Let it expand to full width */
+        padding: 0 5px; /* Ensure space on sides */
+    }
+
+    .bio-container {
+        margin: 0 10px; /* Add a thin margin on mobile */
+        padding: 15px; /* Ensure spacing inside */
+    }
+}
+
+.button.read {
+    background-color: #c74097;
+}
+
+.button.buy {
+    background-color: #4f88f0;
+}
+
+.button.forthcoming {
+    background-color: #097969
+
+        
+
+</style>
+    
+</head>
+    <br>
+<body>
+     
+<br>
+<div class="bio-container">
+    <nav>
+  <a href="/"><strong>Home</strong></a> ·
+  <a href="/about"><strong>About</strong></a> ·
+  <a href="/stories"><strong>Stories</strong></a> ·
+  <a href="/press"><strong>Press</strong></a> ·
+</nav>
+ 
+    <h1>About</h1>
+    
+    <p class="bio">Dan is a sci-fi and fantasy writer from the UK.</p>
+        <p class="bio">His short stories have been published in <em>F&SF, Cast of Wonders, Metastellar</em>, and many other magazines and anthologies. You can find links to them all below. He lives in the UK with several other life forms: his long-suffering partner and daughter, and a second-hand cat that doesn't work properly.</p>
+    <p class="bio">You can contact Dan on <b><a href="https://www.instagram.com/dan.peacock.writer/">Instagram</a></b>, <b><a href="https://bsky.app/profile/danpeacock.bsky.social">Bluesky</a></b>, or by <b><a href="mailto:danpeacock92@gmail.com">email</a></b>.</p>
+</div>
