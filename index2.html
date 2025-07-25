@@ -85,7 +85,9 @@ background-color: white;        /* White background for the bio container */
     padding-left: 40px;  /* Adds space to the left side */
     padding-right: 40px; /* Adds space to the right side */
     font-family: 'Roboto', sans-serif;
-    width: 750px;
+    max-width: 750px;   /* constrain width on large screens */
+  width: 90%;        /* allow it to shrink on small screens */
+  box-sizing: border-box; /* include padding in width */
     
 }
 
