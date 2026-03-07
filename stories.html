@@ -167,53 +167,6 @@ h1 {
   }
 }
 
- /* Existing Featured Card Styles */
-.featured-story-card {
-  display: flex;
-  flex-direction: row; 
-  align-items: center; 
-  justify-content: space-between;
-  margin: 10px 20px; 
-  padding: 20px;
-  background: #fff;
-  font-family: 'Roboto', sans-serif;
-  border-radius: 10px;
-  border: 2px solid #c74097;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-.featured-card-content {
-  flex: 1;
-  text-align: left;
-  padding-right: 25px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; /* Ensures button stays on the left */
-}
-
-/* Button Styling */
-.read-online-btn {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 8px 20px;
-  background-color: #c74097;
-  color: white;
-  text-decoration: none;
-  border-radius: 20px;
-  font-weight: bold;
-  font-size: 0.9rem;
-  transition: opacity 0.3s ease, background-color 0.3s ease;
-}
-
-
-.featured-card-image img {
-  max-width: 180px;
-  height: auto;
-  border-radius: 8px;
-}
-
-
 h1, h2 {
     font-family: 'Merriweather', serif;
     color: #c74097;
@@ -313,18 +266,19 @@ h1, h2 {
 
 <article class="featured-story-card">
   <div class="featured-card-content">
-    <h2 style="margin-top:0;">Featured Story</h2>
-    <p style="font-size: 1.1em; color: #555; line-height: 1.6;">
-      On a half-abandoned future Earth, an ornithologist discovers a critically endangered bird nesting beneath a spaceport launch pad.
-    </p>
-    <div class="buttons" style="justify-content: flex-start;">
-      <a href="https://kaleidotrope.net/winter-2026/take-flight-by-dan-peacock/" class="button forthcoming" style="max-width: 250px;">Read online in Kaleidotrope</a>
-    </div>
-  </div>
-  <div class="featured-card-image">
-    <img src="flight.jpg" alt="Featured story image">
-  </div>
-</article>
+    <h1><Featured Story</h1>
+   <br>
+      <div class="story-card">
+                <img src="flight.jpg">
+                <br>
+                <strong>Take Flight</strong>
+                <br>
+                <p class="description">On a half-abandoned future Earth, an ornithologist discovers a critically endangered bird nesting beneath a spaceport launch pad.</p>
+                <div class="buttons">
+               <a href="https://kaleidotrope.net/winter-2026/take-flight-by-dan-peacock/" class="button read">Read online in Kaleidotrope</a>
+                </div>
+            </div>
+
           
           
 </div>
