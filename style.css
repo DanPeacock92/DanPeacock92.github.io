@@ -193,7 +193,6 @@ nav {
 .story-link, .story-link:visited {
     color: #c74097;
     text-decoration: none;
-    font-style: italic;
 }
 
 .story-link:hover {
