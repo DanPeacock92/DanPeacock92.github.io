@@ -1,3 +1,4 @@
+/* --- Global Styles --- */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -11,6 +12,49 @@ h1, h2 {
     font-family: 'Merriweather', serif;
     color: #c74097;
     margin-bottom: 20px;
+}
+
+/* --- Layout Containers --- */
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    background: #f7f7f7;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.text-container {
+    flex: 1;
+    max-width: 500px;
+    text-align: left;
+}
+
+.bio-container {
+    background-color: white;
+    border: 2px solid #c74097;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 900px;
+    width: 95%;
+    box-sizing: border-box;
+}
+
+.bio-container p {
+    font-size: 1.2em;
+    color: #555;
+    line-height: 1.6;
 }
 
 /* --- Navigation --- */
@@ -43,25 +87,20 @@ nav {
     transform: translateY(-2px);
 }
 
-/* --- Containers --- */
-.bio-container {
-    background-color: white;
-    border: 2px solid #c74097;
-    border-radius: 10px;
-    padding: 20px;
-    font-family: 'Roboto', sans-serif;
-    margin: 20px auto;
-    max-width: 900px;
-    width: 95%;
-    box-sizing: border-box;
+/* --- Profile Image --- */
+.profile-container {
+    flex-shrink: 0;
 }
 
-.bio-container p {
-    font-size: 1.2em;
-    color: #555;
-    line-height: 1.6;
+.profile {
+    width: 300px;
+    height: 300px;
+    border-radius: 10%;
+    object-fit: cover;
+    border: 3px solid #c74097;
 }
 
+/* --- Fiction Grid & Cards --- */
 .fiction {
     display: flex;
     flex-wrap: wrap;
@@ -72,19 +111,23 @@ nav {
     padding: 20px 15px;
 }
 
-/* --- Story Cards --- */
 .story-card {
     flex: 1 1 160px;
     max-width: 200px;
     text-align: center;
     background: #fff;
-    padding: 15px;
+    padding: 10px;
     border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     border: 2px solid #c74097;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    transition: transform 0.3s ease;
+}
+
+.story-card:hover {
+    transform: translateY(-5px);
 }
 
 .story-card img {
@@ -92,6 +135,7 @@ nav {
     height: 225px;
     object-fit: cover;
     border-radius: 5px;
+    display: block;
     margin: 0 auto 10px auto;
 }
 
@@ -99,25 +143,6 @@ nav {
     font-size: 0.95rem;
     line-height: 1.4;
     margin: 10px 0;
-}
-
-.featured-link {
-    display: inline-block; /* Makes the link wrap tightly around the image */
-    text-decoration: none;
-    transition: transform 0.3s ease;
-}
-
-.featured-link:hover {
-    transform: scale(1.05); /* Subtle grow effect when hovering */
-}
-
-.custom-card-img {
-    width: 300px;
-    height: auto; /* Maintains aspect ratio */
-    border: 2px solid #c74097; /* Your signature pink */
-    border-radius: 10px; /* Matching your other cards */
-    display: block;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 /* --- Buttons --- */
@@ -134,7 +159,7 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 5px 10px;
+    padding: 10px;
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -148,19 +173,43 @@ nav {
 .button.buy { background-color: #4f88f0; }
 .button.forthcoming { background-color: #097969; }
 
-/* --- Responsive Layout --- */
-@media (max-width: 600px) {
-    .story-card {
-        flex: 0 1 calc(45% - 10px);
-    }
-    .bio-container {
-        margin: 10px;
-    }
+/* --- Standalone Static Image Links --- */
+.featured-link {
+    display: inline-block;
+    text-decoration: none;
 }
 
-@media (max-width: 480px) {
-    .nav-button {
-        padding: 8px 12px;
-        font-size: 1rem;
+.custom-card-img {
+    width: 300px;
+    height: auto;
+    border: 2px solid #c74097;
+    border-radius: 10px;
+    display: block;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+}
+
+/* --- Text Links --- */
+.story-link, .story-link:visited {
+    color: #c74097;
+    text-decoration: none;
+    font-style: italic;
+}
+
+.story-link:hover {
+    text-decoration: underline;
+}
+
+/* --- Responsive Layout --- */
+@media (max-width: 600px) {
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .text-container {
+        text-align: center;
+    }
+    .story-card {
+        flex: 0 1 calc(50% - 20px);
     }
 }
