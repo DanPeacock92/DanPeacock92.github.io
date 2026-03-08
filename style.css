@@ -101,6 +101,25 @@ nav {
     margin: 10px 0;
 }
 
+.featured-link {
+    display: inline-block; /* Makes the link wrap tightly around the image */
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.featured-link:hover {
+    transform: scale(1.05); /* Subtle grow effect when hovering */
+}
+
+.custom-card-img {
+    width: 200px;
+    height: auto; /* Maintains aspect ratio */
+    border: 2px solid #c74097; /* Your signature pink */
+    border-radius: 10px; /* Matching your other cards */
+    display: block;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
 /* --- Buttons --- */
 .buttons {
     display: flex;
