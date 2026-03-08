@@ -112,7 +112,7 @@ nav {
 }
 
 .custom-card-img {
-    width: 200px;
+    width: 300px;
     height: auto; /* Maintains aspect ratio */
     border: 2px solid #c74097; /* Your signature pink */
     border-radius: 10px; /* Matching your other cards */
