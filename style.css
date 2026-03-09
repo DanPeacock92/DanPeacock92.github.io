@@ -8,7 +8,7 @@ body {
     text-align: center;
 }
 
-h1, h2 {
+h1, h2, strong {
     font-family: 'Merriweather', serif;
     color: #c74097;
     margin-bottom: 20px;
