@@ -195,6 +195,11 @@ nav {
     text-decoration: none;
 }
 
+.secret-link, .secret-link:visited {
+    color:black
+    text-decoration: none;
+}
+
 .story-link:hover {
     text-decoration: underline;
 }
