@@ -208,12 +208,10 @@ nav {
 .newsletter-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    /* Reduced from 200px to something more subtle */
+    justify-content: center; /* Centers content vertically */
+    align-items: center;     /* Centers content horizontally */
     min-height: 120px; 
-    /* Reduced top/bottom padding from 40px to 20px */
-    padding: 20px; 
+    padding: 30px 20px;      /* Increased vertical padding slightly for breathing room */
     margin: 20px auto;
     background-color: white;
     border: 2px solid #c74097;
@@ -233,8 +231,11 @@ nav {
 .newsletter-form {
     display: flex;
     justify-content: center;
+    align-items: center;     /* Ensures input and button are level with each other */
     gap: 10px;
     flex-wrap: wrap;
+    width: 100%;             /* Ensures form takes full width of container */
+    margin: 0;               /* Removes any default form margins */
 }
 
 .newsletter-input {
@@ -247,6 +248,7 @@ nav {
     border: 2px solid #ddd;
     border-radius: 8px;
     outline: none;
+    margin: 0;
     transition: border-color 0.3s ease;
     box-sizing: border-box; 
 }
@@ -261,6 +263,7 @@ nav {
     font-weight: bold;
     font-size: 1rem;
     color: white;
+    margin: 0;
     background-color: #c74097;
     border: none;
     border-radius: 8px;
