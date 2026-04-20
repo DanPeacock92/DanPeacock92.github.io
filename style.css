@@ -242,6 +242,7 @@ nav {
     border-radius: 8px;
     outline: none;
     transition: border-color 0.3s ease;
+    box-sizing: border-box; 
 }
 
 .newsletter-input:focus {
@@ -293,5 +294,10 @@ nav {
     }
     .story-card {
         flex: 0 1 calc(50% - 20px);
+    }
+    .newsletter-input {
+        width: 100%;
+        max-width: none;
+        min-width: 0; /* Ensures it can shrink smaller than 250px if needed */
     }
 }
