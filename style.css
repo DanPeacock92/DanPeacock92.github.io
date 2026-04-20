@@ -215,6 +215,11 @@ nav {
     width: 95%;
     box-sizing: border-box;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertical centering */
+    align-items: center;     /* Horizontal centering */
+    min-height: 200px;       /* Gives it a consistent height so it doesn't "jump" */
 }
 
 .newsletter-container p {
@@ -265,6 +270,15 @@ nav {
 .newsletter-submit:hover {
     background-color: #a6327d;
     transform: translateY(-2px);
+}
+
+#form-status {
+    font-family: 'Merriweather', serif;
+    color: #c74097;
+    font-weight: bold;       /* Makes it bold */
+    font-size: 1.2rem;       /* Makes it slightly larger for impact */
+    margin: 0;               /* Removes default margins that cause misalignment */
+    text-align: center;
 }
 
 /* Responsive adjustment for mobile */
