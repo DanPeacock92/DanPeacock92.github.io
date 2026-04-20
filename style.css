@@ -206,20 +206,21 @@ nav {
 
 /* --- Newsletter Signup --- */
 .newsletter-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* Reduced from 200px to something more subtle */
+    min-height: 120px; 
+    /* Reduced top/bottom padding from 40px to 20px */
+    padding: 20px; 
+    margin: 20px auto;
     background-color: white;
     border: 2px solid #c74097;
     border-radius: 10px;
-    padding: 40px 20px;
-    margin: 40px auto;
     max-width: 900px;
     width: 95%;
     box-sizing: border-box;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Vertical centering */
-    align-items: center;     /* Horizontal centering */
-    min-height: 200px;       /* Gives it a consistent height so it doesn't "jump" */
 }
 
 .newsletter-container p {
@@ -275,10 +276,12 @@ nav {
 #form-status {
     font-family: 'Merriweather', serif;
     color: #c74097;
-    font-weight: bold;       /* Makes it bold */
-    font-size: 1.2rem;       /* Makes it slightly larger for impact */
-    margin: 0;               /* Removes default margins that cause misalignment */
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin: 0;
     text-align: center;
+    /* Adding a tiny bit of line-height helps if the text wraps on mobile */
+    line-height: 1.4;
 }
 
 /* Responsive adjustment for mobile */
