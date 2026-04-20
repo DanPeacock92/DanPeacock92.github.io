@@ -208,10 +208,12 @@ nav {
 .newsletter-container {
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centers content vertically */
-    align-items: center;     /* Centers content horizontally */
-    min-height: 120px; 
-    padding: 30px 20px;      /* Increased vertical padding slightly for breathing room */
+    justify-content: center; /* Centers vertically */
+    align-items: center;     /* Centers horizontally */
+    
+    /* Set a fixed height so the box doesn't resize during the swap */
+    height: 100px; 
+    
     margin: 20px auto;
     background-color: white;
     border: 2px solid #c74097;
@@ -219,6 +221,7 @@ nav {
     max-width: 900px;
     width: 95%;
     box-sizing: border-box;
+    padding: 0; /* Let Flexbox handle the spacing instead of padding */
 }
 
 .newsletter-container p {
@@ -231,11 +234,10 @@ nav {
 .newsletter-form {
     display: flex;
     justify-content: center;
-    align-items: center;     /* Ensures input and button are level with each other */
+    align-items: center;
     gap: 10px;
     flex-wrap: wrap;
-    width: 100%;             /* Ensures form takes full width of container */
-    margin: 0;               /* Removes any default form margins */
+    margin: 0;
 }
 
 .newsletter-input {
@@ -281,10 +283,8 @@ nav {
     color: #c74097;
     font-weight: bold;
     font-size: 1.1rem;
-    margin: 0;
     text-align: center;
-    /* Adding a tiny bit of line-height helps if the text wraps on mobile */
-    line-height: 1.4;
+    margin: 0; /* Keep this at 0 to ensure it's centered */
 }
 
 /* Responsive adjustment for mobile */
