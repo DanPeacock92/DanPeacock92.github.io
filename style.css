@@ -112,7 +112,8 @@ nav {
     max-width: 1000px; /* Matches your bio container */
     width: 95%;
     margin: 20px auto 40px auto;
-    padding: 0 20px;
+    padding-left: 0;
+    padding-right: 0;
     box-sizing: border-box;
 }
 
