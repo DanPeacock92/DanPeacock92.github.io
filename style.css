@@ -41,7 +41,7 @@ h1, h2, strong {
 }
 
 .bio-container {
-    background: rgba(255, 255, 255, 0.8); /* Slightly translucent */
+    background: rgba(255, 255, 255, 0.85); /* Slightly translucent */
     backdrop-filter: blur(5px);           /* Blurs the gradient behind the card */
     box-shadow: 0 10px 20px rgba(0,0,0,0.05);
     border: 2px solid rgba(199, 64, 151, 0.2);
@@ -109,7 +109,7 @@ nav {
     grid-template-columns:  1fr; 
     gap: 50px;
     max-width: 1000px; /* Matches your bio container */
-    margin: 20px auto;
+    margin: 20px auto 40px auto;
     padding: 0 15px;
     box-sizing: border-box;
 }
@@ -137,7 +137,7 @@ nav {
     justify-content: space-between;
     transition: transform 0.3s ease;
     text-align: center;
-    background: rgba(255, 255, 255, 0.7); /* Slightly translucent */
+    background: rgba(255, 255, 255, 0.85); /* Slightly translucent */
     backdrop-filter: blur(5px);           /* Blurs the gradient behind the card */
     box-shadow: 0 10px 20px rgba(0,0,0,0.05);
       border: 2px solid rgba(199, 64, 151, 0.2);
@@ -177,9 +177,16 @@ nav {
     text-align: left; /* Align with the edge of your bio/grid */
     max-width: 1000px;
     margin: 60px auto 20px auto; /* More space above the year, less below */
-    padding: 0 15px;
     border-bottom: 2px solid rgba(199, 64, 151, 0.2); /* Subtle underline */
     display: block;
+    background: rgba(255, 255, 255, 0.85); /* Slightly translucent */
+    backdrop-filter: blur(5px);           /* Blurs the gradient behind the card */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+      border: 2px solid rgba(199, 64, 151, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    padding: 10px 15px;
 }
 
 /* --- Buttons --- */
