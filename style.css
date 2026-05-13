@@ -50,7 +50,7 @@ h1, h2, strong {
     padding-right: 20px;
     margin-left: auto;
     margin-right: auto;
-    max-width: 1000px;
+    max-width: 900px;
     width: 95%;
     box-sizing: border-box;
 }
@@ -109,7 +109,7 @@ nav {
     display: grid;
     grid-template-columns:  1fr; 
     gap: 30px;
-    max-width: 1000px; /* Matches your bio container */
+    max-width: 900px; /* Matches your bio container */
     width: 95%;
     margin: 20px auto 40px auto;
     padding-left: 0;
@@ -158,20 +158,14 @@ nav {
 }
 
 .story-card img {
-    /* 1. Force every image to be the exact same width */
-    width: 100%; 
-    max-width: 250px; /* Adjust this number to change the overall 'thickness' of the covers */
+    width: 100%;
+    aspect-ratio: 2 / 3; /* Restored the 2:3 ratio */
+    object-fit: cover;   /* Restored the uniform fill */
+    object-position: center;
     
-    /* 2. Show the full image without cropping */
-    height: auto; 
-    object-fit: contain; 
-    
-    /* 3. The 'Safety Valve' for small screens */
-    max-height: 40vh; 
-    
-    display: block;
-    margin: 0 auto 15px auto;
     border-radius: 5px;
+    display: block;
+    margin: 0 auto 10px auto;
 }
 
 .year-header {
@@ -180,7 +174,7 @@ nav {
     color: #c74097;
     text-align: center;
      border-radius: 10px;
-    max-width: 1000px;
+    max-width: 900px;
     width: 95%;
     margin: 30px auto 30px auto; 
     padding-left: 20px;
