@@ -128,11 +128,12 @@ nav {
     }
 
 .story-card {
-    background: #fff; /* This ensures it stays white against the background */
+   background: rgba(255, 255, 255, 0.9); /* Slightly translucent */
+    backdrop-filter: blur(5px);           /* Blurs the gradient behind the card */
+    border: 1px solid rgba(199, 64, 151, 0.2); 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
     padding: 15px;
     border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    border: 2px solid #c74097;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
