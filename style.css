@@ -139,9 +139,16 @@ nav {
 
 .story-card img {
     width: 100%;
-    height: 250px;
+    /* Sets the 2:3 vertical ratio */
+    aspect-ratio: 2 / 3; 
+    
+    /* This ensures the image fills the space without stretching */
+    object-fit: cover; 
+    
+    /* Position the image to focus on the center */
+    object-position: center; 
+    
     border-radius: 5px;
-    object-fit: cover;
     display: block;
     margin: 0 auto 10px auto;
 }
