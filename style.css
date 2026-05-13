@@ -139,7 +139,7 @@ nav {
 
 .story-card img {
     width: 100%;
-    height: auto;
+    height: 250px;
     border-radius: 5px;
     object-fit: cover;
     display: block;
