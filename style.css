@@ -102,24 +102,30 @@ nav {
 
 /* --- Fiction Grid & Cards --- */
 .fiction {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 50px;
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 20px 15px;
-    grid-template-columns: repeat(3, 1fr);
-  }
+    display: grid;
+    /* This sets the 2-column minimum for mobile */
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px;
+    max-width: 1000px; /* Matches your bio-container */
+    margin: 40px auto;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+/* This switches to 3 columns maximum for tablets and desktops */
+@media (min-width: 768px) {
+    .fiction {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px; /* Slightly wider spacing for larger screens */
+    }
+}
 
 }
 
 .story-card {
-    flex: 1 1 160px;
-    max-width: 300px;
     text-align: center;
     background: #fff;
-    padding: 10px;
+    padding: 15px;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     border: 2px solid #c74097;
@@ -315,9 +321,7 @@ nav {
     }
     .text-container {
         text-align: center;
-    }
-    .story-card {
-        flex: 0 1 calc(50% - 20px);
+
     }
     .newsletter-input {
         width: 100%;
