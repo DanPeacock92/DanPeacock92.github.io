@@ -41,7 +41,7 @@ h1, h2, strong {
 }
 
 .bio-container {
-    background: rgba(255, 255, 255, 0.7); /* Slightly translucent */
+    background: rgba(255, 255, 255, 0.8); /* Slightly translucent */
     backdrop-filter: blur(5px);           /* Blurs the gradient behind the card */
     box-shadow: 0 10px 20px rgba(0,0,0,0.05);
     border: 2px solid rgba(199, 64, 151, 0.2);
@@ -145,7 +145,7 @@ nav {
 
 /* Optional: Make it slightly more solid when hovering */
 .story-card:hover {
-    background: rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.8);
     transform: translateY(-5px);
 }
 }
@@ -168,6 +168,18 @@ nav {
     border-radius: 5px;
     display: block;
     margin: 0 auto 10px auto;
+}
+
+.year-header {
+    font-family: 'Merriweather', serif;
+    font-size: 2rem;
+    color: #c74097;
+    text-align: left; /* Align with the edge of your bio/grid */
+    max-width: 1000px;
+    margin: 60px auto 20px auto; /* More space above the year, less below */
+    padding: 0 15px;
+    border-bottom: 2px solid rgba(199, 64, 151, 0.2); /* Subtle underline */
+    display: block;
 }
 
 /* --- Buttons --- */
@@ -252,7 +264,7 @@ nav {
 .newsletter-container p {
     font-family: 'Roboto', sans-serif;
     font-size: 1.1rem;
-    color: #555;
+    background: rgba(255, 255, 255, 0.8);
     margin-bottom: 25px;
 }
 
