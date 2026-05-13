@@ -109,6 +109,7 @@ nav {
     grid-template-columns:  1fr; 
     gap: 50px;
     max-width: 1000px; /* Matches your bio container */
+    width: 95%
     margin: 20px auto 40px auto;
     padding: 0 15px;
     box-sizing: border-box;
@@ -174,11 +175,12 @@ nav {
     font-family: 'Merriweather', serif;
     font-size: 2rem;
     color: #c74097;
-    text-align: left; /* Align with the edge of your bio/grid */
+    text-align: center;
     max-width: 1000px;
+    width; 95%
     margin: 60px auto 20px auto; /* More space above the year, less below */
+    box-sizing: border-box;
     border-bottom: 2px solid rgba(199, 64, 151, 0.2); /* Subtle underline */
-    display: block;
     background: rgba(255, 255, 255, 0.85); /* Slightly translucent */
     backdrop-filter: blur(5px);           /* Blurs the gradient behind the card */
     box-shadow: 0 10px 20px rgba(0,0,0,0.05);
@@ -186,7 +188,8 @@ nav {
     position: sticky;
     top: 0;
     z-index: 10;
-    padding: 10px 15px;
+    padding-bottom: 10px;
+    display: block;
 }
 
 /* --- Buttons --- */
