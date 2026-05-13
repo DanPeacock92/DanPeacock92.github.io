@@ -192,11 +192,12 @@ nav {
     box-shadow: 0 10px 20px rgba(0,0,0,0.05);
       border: 2px solid rgba(199, 64, 151, 0.2);
     position: sticky;
-    top: 10;
+    top: 10px;
     z-index: 10;
     padding-bottom: 10px;
     padding-top: 10px;
     display: block;
+}
 }
 
 /* --- Buttons --- */
