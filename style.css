@@ -41,7 +41,7 @@ h1, h2, strong {
 }
 
 .bio-container {
-    background: rgba(255, 255, 255, 0.8); /* Slightly translucent */
+    background: rgba(255, 255, 255, 0.7); /* Slightly translucent */
     backdrop-filter: blur(5px);           /* Blurs the gradient behind the card */
     box-shadow: 0 10px 20px rgba(0,0,0,0.05);
     border: 2px solid #c74097;
@@ -137,7 +137,7 @@ nav {
     justify-content: space-between;
     transition: transform 0.3s ease;
     text-align: center;
-    background: rgba(255, 255, 255, 0.8); /* Slightly translucent */
+    background: rgba(255, 255, 255, 0.7); /* Slightly translucent */
     backdrop-filter: blur(5px);           /* Blurs the gradient behind the card */
     box-shadow: 0 10px 20px rgba(0,0,0,0.05);
     border: 2px solid #c74097;
