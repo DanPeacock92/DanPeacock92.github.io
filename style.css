@@ -105,8 +105,8 @@ nav {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 30px;
-    max-width: 900px;
+    gap: 50px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 20px 15px;
     grid-template-columns: repeat(2, 1fr); 
