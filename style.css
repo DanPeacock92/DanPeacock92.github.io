@@ -158,16 +158,14 @@ nav {
 }
 
 .story-card img {
-    width: 100%;
-    
-    aspect-ratio: 3 / 4; 
-    
-    /* This ensures the image fills the space without stretching */
-    object-fit: cover; 
-    
-    /* Position the image to focus on the center */
-    object-position: center; 
-    
+    width: auto;         /* Allow width to shrink to maintain ratio */
+    max-width: 100%;     /* But never wider than the card */
+    /* 1. Limit height to a percentage of the screen */
+    height: auto;
+    max-height: 45vh;    /* Adjust this (e.g., 40vh) to get the fit perfect */
+    /* 2. Remove the forced aspect-ratio and object-fit */
+    aspect-ratio: auto; 
+    object-fit: contain; /* Shows the WHOLE image, no cropping */
     border-radius: 5px;
     display: block;
     margin: 0 auto 10px auto;
