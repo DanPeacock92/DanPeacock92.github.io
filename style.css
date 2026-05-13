@@ -104,21 +104,28 @@ nav {
 .fiction {
     display: grid;
     /* Forces 2 columns on mobile */
-    grid-template-columns: repeat(2, 1fr); 
+    grid-template-columns:  1fr; 
     gap: 50px;
     max-width: 1000px; /* Matches your bio container */
-    margin: 40px auto;
+    margin: 20px auto;
     padding: 0 15px;
     box-sizing: border-box;
 }
 
-/* Switches to 3 columns max on larger screens */
+/* 2. Add a new breakpoint for 2 columns */
+@media (min-width: 480px) {
+    .fiction {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* 3. Keep your 3-column maximum */
 @media (min-width: 768px) {
     .fiction {
         grid-template-columns: repeat(3, 1fr);
         gap: 30px;
     }
-}
+    }
 
 .story-card {
     background: #fff; /* This ensures it stays white against the background */
