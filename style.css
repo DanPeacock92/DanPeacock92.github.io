@@ -44,7 +44,7 @@ h1, h2, strong {
     background: rgba(255, 255, 255, 0.7); /* Slightly translucent */
     backdrop-filter: blur(5px);           /* Blurs the gradient behind the card */
     box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-    border: 2px solid #c74097;
+    border: 2px solid rgba(199, 64, 151, 0.2);
     border-radius: 10px;
     padding: 20px;
     margin: 20px auto;
@@ -99,7 +99,7 @@ nav {
     height: 300px;
     border-radius: 10%;
     object-fit: cover;
-    border: 3px solid #c74097;
+      border: 2px solid rgba(199, 64, 151, 0.2);
 }
 
 /* --- Fiction Grid & Cards --- */
@@ -140,7 +140,7 @@ nav {
     background: rgba(255, 255, 255, 0.7); /* Slightly translucent */
     backdrop-filter: blur(5px);           /* Blurs the gradient behind the card */
     box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-    border: 2px solid #c74097;
+      border: 2px solid rgba(199, 64, 151, 0.2);
 }
 
 /* Optional: Make it slightly more solid when hovering */
