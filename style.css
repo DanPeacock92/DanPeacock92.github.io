@@ -158,17 +158,20 @@ nav {
 }
 
 .story-card img {
-    width: auto;         /* Allow width to shrink to maintain ratio */
-    max-width: 100%;     /* But never wider than the card */
-    /* 1. Limit height to a percentage of the screen */
-    height: auto;
-    max-height: 45vh;    /* Adjust this (e.g., 40vh) to get the fit perfect */
-    /* 2. Remove the forced aspect-ratio and object-fit */
-    aspect-ratio: auto; 
-    object-fit: contain; /* Shows the WHOLE image, no cropping */
-    border-radius: 5px;
+    /* 1. Force every image to be the exact same width */
+    width: 100%; 
+    max-width: 250px; /* Adjust this number to change the overall 'thickness' of the covers */
+    
+    /* 2. Show the full image without cropping */
+    height: auto; 
+    object-fit: contain; 
+    
+    /* 3. The 'Safety Valve' for small screens */
+    max-height: 40vh; 
+    
     display: block;
-    margin: 0 auto 10px auto;
+    margin: 0 auto 15px auto;
+    border-radius: 5px;
 }
 
 .year-header {
