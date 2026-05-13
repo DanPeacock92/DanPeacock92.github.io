@@ -161,6 +161,8 @@ nav {
     width: 100%;
     /* Sets the 2:3 vertical ratio */
     aspect-ratio: 2 / 3; 
+
+    max-height: 50vh;
     
     /* This ensures the image fills the space without stretching */
     object-fit: cover; 
