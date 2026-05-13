@@ -159,10 +159,8 @@ nav {
 
 .story-card img {
     width: 100%;
-    /* Sets the 2:3 vertical ratio */
-    aspect-ratio: 2 / 3; 
-
-    max-height: 50vh;
+    
+    aspect-ratio: 3 / 4; 
     
     /* This ensures the image fills the space without stretching */
     object-fit: cover; 
