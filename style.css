@@ -178,7 +178,7 @@ nav {
     text-align: center;
     max-width: 1000px;
     width: 95%;
-    margin: 60px auto 20px auto; /* More space above the year, less below */
+    margin: 30px auto 30px auto; /* More space above the year, less below */
     box-sizing: border-box;
     border-bottom: 2px solid rgba(199, 64, 151, 0.2); /* Subtle underline */
     background: rgba(255, 255, 255, 0.85); /* Slightly translucent */
@@ -186,7 +186,7 @@ nav {
     box-shadow: 0 10px 20px rgba(0,0,0,0.05);
       border: 2px solid rgba(199, 64, 151, 0.2);
     position: sticky;
-    top: 0;
+    top: 10;
     z-index: 10;
     padding-bottom: 10px;
     display: block;
