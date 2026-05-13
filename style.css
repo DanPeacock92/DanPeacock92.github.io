@@ -104,7 +104,7 @@ nav {
 .fiction {
     display: flex;
     flex-wrap: wrap;
-    justify-content: left;
+    justify-content: center;
     gap: 30px;
     max-width: 900px;
     margin: 0 auto;
