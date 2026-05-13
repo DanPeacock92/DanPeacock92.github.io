@@ -46,8 +46,10 @@ h1, h2, strong {
     box-shadow: 0 10px 20px rgba(0,0,0,0.05);
     border: 2px solid rgba(199, 64, 151, 0.2);
     border-radius: 10px;
-    padding: 20px;
-    margin: 20px auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
     max-width: 1000px;
     width: 95%;
     box-sizing: border-box;
@@ -105,9 +107,8 @@ nav {
 /* --- Fiction Grid & Cards --- */
 .fiction {
     display: grid;
-    /* Forces 2 columns on mobile */
     grid-template-columns:  1fr; 
-    gap: 50px;
+    gap: 30px;
     max-width: 1000px; /* Matches your bio container */
     width: 95%;
     margin: 20px auto 40px auto;
@@ -180,6 +181,10 @@ nav {
     max-width: 1000px;
     width: 95%;
     margin: 30px auto 30px auto; 
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
     box-sizing: border-box;
     border-bottom: 2px solid rgba(199, 64, 151, 0.2); /* Subtle underline */
     background: rgba(255, 255, 255, 0.85); /* Slightly translucent */
