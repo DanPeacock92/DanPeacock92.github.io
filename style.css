@@ -103,28 +103,25 @@ nav {
 /* --- Fiction Grid & Cards --- */
 .fiction {
     display: grid;
-    /* This sets the 2-column minimum for mobile */
+    /* Forces 2 columns on mobile */
     grid-template-columns: repeat(2, 1fr); 
     gap: 20px;
-    max-width: 1000px; /* Matches your bio-container */
+    max-width: 1000px; /* Matches your bio container */
     margin: 40px auto;
     padding: 0 15px;
     box-sizing: border-box;
 }
 
-/* This switches to 3 columns maximum for tablets and desktops */
+/* Switches to 3 columns max on larger screens */
 @media (min-width: 768px) {
     .fiction {
         grid-template-columns: repeat(3, 1fr);
-        gap: 30px; /* Slightly wider spacing for larger screens */
+        gap: 30px;
     }
 }
 
-}
-
 .story-card {
-    text-align: center;
-    background: #fff;
+    background: #fff; /* This ensures it stays white against the background */
     padding: 15px;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -133,6 +130,7 @@ nav {
     flex-direction: column;
     justify-content: space-between;
     transition: transform 0.3s ease;
+    text-align: center;
 }
 
 .story-card:hover {
@@ -141,18 +139,11 @@ nav {
 
 .story-card img {
     width: 100%;
-  height: auto;
-  border-radius: 5px;;
-    object-fit: cover;
+    height: auto;
     border-radius: 5px;
+    object-fit: cover;
     display: block;
     margin: 0 auto 10px auto;
-}
-
-.description {
-    font-size: 0.95rem;
-    line-height: 1.4;
-    margin: 10px 0;
 }
 
 /* --- Buttons --- */
