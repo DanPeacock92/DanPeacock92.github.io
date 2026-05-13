@@ -133,8 +133,9 @@ nav {
 }
 
 .story-card img {
-    width: 150px;
-    height: 225px;
+    width: 100%;
+  height: auto;
+  border-radius: 5px;;
     object-fit: cover;
     border-radius: 5px;
     display: block;
